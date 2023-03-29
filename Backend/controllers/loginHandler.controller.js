@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const loginHandler = async(req,res) =>{
     const data = req.body;
+    console.log(data);
     try {
         const saltRounds = 10;
         const myPlaintextPassword = data.password;

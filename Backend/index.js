@@ -5,6 +5,12 @@ require('dotenv').config()
 const port = process.env.PORT || 8081;
 const {connection} = require("./config/db");
 const {userRoute} = require("./routes/user.routes");
+const cors = require('cors');
+
+
+app.use(cors({
+    origin: "*"
+}));
 
 app.use('/users', userRoute);
 
