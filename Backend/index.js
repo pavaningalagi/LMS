@@ -3,13 +3,9 @@ const app = express();
 require('dotenv').config()
 const port = process.env.PORT || 8081;
 const {connection} = require("./config/db");
+const {userRoute} = require("./routes/user.routes");
 
-app.post('/signup', (req, res) =>{
-    res.send("Welcome");
-});
-app.post('/login', (req, res) =>{
-    res.send("Welcome");
-});
+app.use('/', userRoute);
 
 app.listen(port,async () => {
     try {
