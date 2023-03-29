@@ -11,4 +11,7 @@ const form = document.getElementById("form");
 form.onsubmit = (e)=>{
     e.preventDefault();
     // api req verification;
+    if(form.email.value && form.password.value){
+        console.log(1);
+    }
 };
